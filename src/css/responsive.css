@@ -1,0 +1,1205 @@
+@media (min-width: 300px) {
+  .main-container{
+    margin-top:175px;
+  }
+  .navbar {
+    padding-left: 20px;
+  }
+  .navbar .nav-icon {
+    margin-left: 20px;
+    font-size: 40px;
+    margin-left: -12px;
+  }
+  .toggle-container {
+    margin-top: 7px;
+  }
+  .nav-text {
+    font-size: 20px;
+    margin-right: 0px;
+    margin-bottom: 7px;
+    margin-left: 5px;
+  }
+  .nav-text:hover {
+    transform: scale(1.02);
+    color: white !important;
+  }
+  .menu-drop-down::before {
+    top: 60px;
+    left: 10px;
+  }
+  .menu-drop-down {
+    margin-top: 0px;
+  }
+  .drop-down-admin {
+    margin-right: 25px !important;
+  }
+  .img-landing-page {
+    width: 300px;
+    height: 300px;
+  }
+  .title {
+    font-size: 60px;
+  }
+  .container-page {
+    margin-top: -70px;
+  }
+  .container-page-search {
+    margin-top: 285px !important;
+    overflow: hidden;
+  }
+  .landing-auth {
+    margin-left: 0px;
+  }
+  .landing-img {
+  align-items: center;  
+
+  }
+  .modal-body-auth {
+    width: 320px;
+  }
+  .select-gender {
+    width: 220px;
+  }
+  .search-title {
+    font-size: 50px;
+  }
+  .search-big {
+    width: 250px;
+  }
+  .search-small {
+    width: 200px !important;
+  }
+  .option-years {
+    width: 130px;
+    padding: 7px 7px;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .label-select-years {
+    margin-left: 10px;
+  }
+
+  .pdf-container-big {
+    width: 160px;
+    transition: 1s ease-out;
+  }
+  .big-pdf-thumb {
+    width: 160px;
+    height: 240px;
+  }
+
+  .pdf-container-small {
+    width: 170px;
+  }
+
+  .small-pdf-thumb {
+    width: 170px;
+    height: 250px;
+  }
+
+  .container-result-pdf {
+    margin-top: 20px;
+    margin-left: -20px !important;
+  }
+  .thumb-big-pdf {
+    width: 270px;
+    height: 370px;
+  }
+  .title-detail-pdf {
+    font-size: 20px;
+  }
+
+  .label-detail-pdf {
+    font-size: 18px;
+  }
+
+  .p-detail-pdf {
+    font-size: 15px;
+  }
+
+  .btn-pdf-detail {
+    width: 200px;
+  }
+  .btn-coll {
+    margin-top: -0px !important;
+  }
+  .title-profile {
+    font-size: 50px;
+  }
+  .inp-file {
+    width: 200px;
+  }
+  .pdf-name {
+    margin-left: 80px !important;
+  }
+  .avatar {
+    width: 190px;
+    height: 190px;
+  }
+
+  .avatar img {
+    width: 1830px;
+    height: 183px;
+  }
+  .text-empty {
+    font-size: 50px;
+  }
+
+  .img-empty {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .d-pending,
+  .d-approve,
+  .d-rejected {
+    font-size: 15px;
+    padding: 10px 0px;
+  }
+  .verify-container{
+    margin-top:-30px !important;
+  }
+  .btn-admin {
+    width : 50px !important;
+    font-size: 10px !important;
+    margin-left: 10px;;
+  }
+}
+@media (min-width: 480px) {
+  .btn-admin {
+    width : 70px !important;
+  }
+  .main-container{
+    margin-top:200px;
+  }
+  .navbar {
+    padding-left: 30px;
+  }
+  .navbar .nav-icon {
+    margin-left: 20px;
+    font-size: 40px;
+    margin-left: -12px;
+  }
+  .toggle-container {
+    margin-top: 5px;
+  }
+  .nav-text {
+    font-size: 20px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+  }
+  .nav-text:hover {
+    transform: scale(1.02);
+    color: white !important;
+  }
+  .menu-drop-down::before {
+    top: 60px;
+    left: 10px;
+  }
+  .drop-down-admin {
+    margin-right: 25px !important;
+  }
+  .img-landing-page {
+    width: 300px;
+    height: 300px;
+  }
+  .title {
+    font-size: 60px;
+  }
+  .container-page {
+    margin-top: -60px;
+    overflow: hidden;
+  }
+  .container-page-search {
+    margin-top: 275px !important;
+    overflow: hidden;
+  }
+  .landing-auth {
+  align-items: center;  
+}
+  .landing-img {
+    margin-left: 0px;
+  }
+  .modal-body-auth {
+    width: 350px;
+  }
+  .select-gender {
+    width: 250px;
+  }
+  .search-big {
+    width: 400px;
+  }
+  .search-small {
+    width: 200px !important;
+  }
+  .option-years {
+    width: 150px;
+    padding: 3px 7px;
+    margin-left: 10px;
+    font-size:17px;
+  }
+  .label-select-years {
+    margin-left: 10px;
+  }
+  /* CardPDF */
+
+  .pdf-container-big {
+    width: 210px;
+    transition: 1s ease-out;
+  }
+
+  .pdf-container-small {
+    width: 170px;
+  }
+
+  .big-pdf-thumb {
+    width: 220px;
+    height: 300px;
+  }
+
+  .small-pdf-thumb {
+    width: 200px;
+    height: 270px;
+  }
+  .container-result-pdf {
+    margin-top: 20px;
+    margin-left: 0px !important;
+  }
+  .thumb-big-pdf {
+    width: 350px;
+    height: 470px;
+  }
+  .title-detail-pdf {
+    font-size: 25px;
+  }
+
+  .label-detail-pdf {
+    font-size: 18px;
+  }
+
+  .p-detail-pdf {
+    font-size: 15px;
+  }
+
+  .btn-pdf-detail {
+    width: 200px;
+  }
+  .btn-coll {
+    margin-top: -0px !important;
+  }
+  .title-profile {
+    font-size: 60px;
+  }
+  .inp-file {
+    width: 200px;
+  }
+  .pdf-name {
+    margin-left: 50px !important;
+  }
+  .avatar {
+    width: 190px;
+    height: 190px;
+  }
+
+  .avatar img {
+    width: 1830px;
+    height: 183px;
+  }
+  .text-empty {
+    font-size: 50px;
+  }
+
+  .img-empty {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .d-pending,
+  .d-approve,
+  .d-rejected {
+    font-size: 18px;
+    padding: 10px 0px;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-container{
+    margin-top:200px;
+  }
+  .navbar {
+    padding-left: 0px;
+  }
+  .navbar .nav-icon {
+    font-size: 45px;
+    margin-left: -12px;
+  }
+  .toggle-container {
+    margin-top: 5px;
+  }
+  .nav-text {
+    font-size: 20px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+    margin-left: 12px;
+  }
+  .nav-text:hover {
+    transform: scale(1.02);
+    color: white !important;
+  }
+
+  .menu-drop-down::before {
+    top: 60px;
+    left: 10px;
+  }
+  .menu-drop-down {
+    margin-top: 0px;
+  }
+  .drop-down-admin {
+    margin-right: 0px !important;
+  }
+
+  .img-landing-page {
+    width: 270px;
+    height: 270px;
+  }
+  .title {
+    font-size: 60px;
+  }
+  .container-page {
+    margin-top: 77px !important;
+    overflow: hidden;
+  }
+  .container-page-search {
+    margin-top: 255px !important;
+    overflow: hidden;
+  }
+  .landing-auth,
+  .landing-img {
+    margin-left: 0px;
+  }
+  .modal-body-auth {
+    width: 416px;
+  }
+  .select-gender {
+    width: 320px;
+  }
+  .search-big {
+    width: 400px;
+  }
+  .search-small {
+    width: 100px;
+  }
+  .option-years {
+    width: 170px;
+    padding: 10px 7px;
+    margin-left: 0px;
+  }
+  .label-select-years {
+    margin-left: 0px;
+  }
+
+  /* CardPDF */
+
+  .pdf-container-big {
+    width: 210px;
+    transition: 1s ease-out;
+  }
+
+  .pdf-container-small {
+    width: 170px;
+  }
+
+  .big-pdf-thumb {
+    width: 220px;
+    height: 300px;
+  }
+
+  .small-pdf-thumb {
+    width: 200px;
+    height: 270px;
+  }
+  .container-result-pdf {
+    margin-left: 0px !important;
+  }
+  .label-select-years {
+    margin-left: 0px;
+  }
+
+  .thumb-big-pdf {
+    width: 250px;
+    height: 350px;
+  }
+  .title-detail-pdf {
+    font-size: 22px;
+  }
+
+  .label-detail-pdf {
+    font-size: 18px;
+  }
+
+  .p-detail-pdf {
+    font-size: 15px;
+  }
+
+  .btn-pdf-detail {
+    width: 200px;
+  }
+  .btn-coll {
+    margin-top: 0px !important;
+  }
+  .title-profile {
+    font-size: 70px;
+  }
+  .inp-file {
+    width: 200px;
+  }
+  .pdf-name {
+    margin-left: 30px !important;
+  }
+  .avatar {
+    width: 190px;
+    height: 190px;
+  }
+
+  .avatar img {
+    width: 1830px;
+    height: 183px;
+  }
+  .text-empty {
+    font-size: 50px;
+  }
+
+  .img-empty {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .d-pending,
+  .d-approve,
+  .d-rejected {
+    font-size: 18px;
+    padding: 10px 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-container{
+    margin-top:140px;
+  }
+  .navbar {
+    padding-left: 0px;
+  }
+  .navbar .nav-icon {
+    margin-left: 0px;
+    font-size: 45px;
+    margin-left: 0px;
+  }
+  .toggle-container {
+    margin-top: 20px;
+  }
+  .nav-text {
+    font-size: 25px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+  .nav-text:hover {
+    transform: scale(1.02);
+    color: white !important;
+  }
+  .menu-drop-down::before {
+    top: -15px;
+    left: 117px;
+  }
+  .menu-drop-down {
+    margin-top: 0px;
+  }
+  .drop-down-admin {
+    margin-right: 0px !important;
+  }
+
+  .img-landing-page {
+    width: 370px;
+    height: 370px;
+  }
+  .title {
+    font-size: 70px;
+  }
+  .container-page {
+    margin-top: 90px !important;
+    overflow: hidden;
+
+  }
+  .container-page-search {
+    margin-top: 235px !important;
+    overflow: hidden;
+  }
+  .landing-auth,
+  .landing-img {
+    margin-left: 0px;
+  }
+
+  .modal-body-auth {
+    width: 416px;
+  }
+  .select-gender {
+    width: 320px;
+  }
+  .search-big {
+    width: 500px;
+  }
+  .search-small {
+    width: 200px;
+  }
+  .option-years {
+    width: 170px;
+    padding: 10px 7px;
+  }
+
+  /* CardPDF */
+
+  .pdf-container-big {
+    width: 210px;
+    transition: 1s ease-out;
+  }
+
+  .pdf-container-small {
+    width: 170px;
+  }
+
+  .big-pdf-thumb {
+    width: 200px;
+    height: 300px;
+  }
+
+  .small-pdf-thumb {
+    width: 200px;
+    height: 270px;
+  }
+  .container-result-pdf {
+    margin-left: 0px !important;
+  }
+  .label-select-years {
+    margin-left: 0px;
+    text-align: start;
+  }
+  .thumb-big-pdf {
+    width: 300px;
+    height: 410px;
+  }
+  .title-detail-pdf {
+    font-size: 25px;
+  }
+
+  .label-detail-pdf {
+    font-size: 18px;
+  }
+
+  .p-detail-pdf {
+    font-size: 15px;
+  }
+
+  .btn-pdf-detail {
+    width: 200px;
+  }
+  .btn-coll {
+    margin-top: -100px !important;
+  }
+  .title-profile {
+    font-size: 70px;
+  }
+  .inp-file {
+    width: 200px;
+  }
+  .pdf-name {
+    margin-left: -20px !important;
+  }
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .avatar img {
+    width: 1930px;
+    height: 193px;
+  }
+  .text-empty {
+    font-size: 50px;
+  }
+
+  .img-empty {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .d-pending,
+  .d-approve,
+  .d-rejected {
+    font-size: 18px;
+    padding: 10px 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-container{
+    margin-top:140px;
+  }
+  .navbar {
+    padding-left: 0px;
+  }
+  .navbar .nav-icon {
+    margin-left: 0px;
+    font-size: 45px;
+    margin-left: 0px;
+  }
+  .toggle-container {
+    margin-top: 0px;
+  }
+  .nav-text {
+    font-size: 25px;
+    margin-right: 30px;
+    margin-bottom: -20px;
+  }
+  .nav-text:hover {
+    transform: scale(1.1);
+  }
+
+  .menu-drop-down::before {
+    top: -15px;
+    left: 117px;
+  }
+  .menu-drop-down {
+    margin-top: 0px;
+  }
+  .drop-down-admin {
+    margin-right: 0px !important;
+  }
+
+  .img-landing-page {
+    width: 400px;
+    height: 400px;
+  }
+
+  .title {
+    font-size: 80px;
+  }
+  .container-page {
+    margin-top: 80px !important;
+    overflow: hidden;
+
+  }
+  .container-page-search {
+    margin-top: 220px !important;
+    overflow: hidden;
+  }
+  .landing-auth {
+    margin-left: 110px !important;
+  }
+
+  .landing-img {
+    margin-left: 30px !important;
+  }
+
+  .modal-body-auth {
+    width: 416px;
+  }
+  .select-gender {
+    width: 320px;
+  }
+
+  .search-big {
+    width: 500px;
+  }
+  .search-small {
+    width: 200px;
+  }
+  .option-years {
+    width: 170px;
+    padding: 10px 7px;
+  }
+
+  /* CardPDF */
+
+  .pdf-container-big {
+    width: 210px;
+    transition: 1s ease-out;
+  }
+
+  .pdf-container-small {
+    width: 170px;
+  }
+
+  .big-pdf-thumb {
+    width: 220px;
+    height: 300px;
+  }
+
+  .small-pdf-thumb {
+    width: 170px;
+    height: 230px;
+  }
+
+  .container-result-pdf {
+    margin-left: 40px !important;
+  }
+  .label-select-years {
+    text-align: center;
+  }
+
+  .thumb-big-pdf {
+    width: 300px;
+    height: 410px;
+  }
+  .title-detail-pdf {
+    font-size: 25px;
+  }
+
+  .label-detail-pdf {
+    font-size: 18px;
+  }
+
+  .p-detail-pdf {
+    font-size: 15px;
+  }
+
+  .btn-pdf-detail {
+    width: 200px;
+    margin-top: 0px;
+  }
+  .btn-coll {
+    margin-top: 0px !important;
+  }
+  .title-profile {
+    font-size: 70px;
+  }
+
+  .inp-file {
+    width: 300px;
+  }
+  .pdf-name {
+    margin-left: 0px !important;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .avatar img {
+    width: 1930px;
+    height: 193px;
+  }
+  .text-empty {
+    font-size: 50px;
+  }
+
+  .img-empty {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .years-container {
+    top: 100px;
+    position: sticky !important;
+  }
+  .d-pending,
+  .d-approve,
+  .d-rejected {
+    font-size: 18px;
+    padding: 10px 0px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .main-container{
+    margin-top:130px;
+  }
+  /* Navbar component styles */
+  .navbar .nav-icon {
+    font-size: 45px;
+    margin-left: 0px;
+  }
+  .nav-icon-user {
+    margin-left: 70px !important;
+  }
+
+  .toggle-container {
+    margin-top: 0px;
+  }
+  .nav-text {
+    font-size: 23px;
+    margin-right: 30px;
+    margin-bottom: -20px;
+  }
+
+  .nav-text:hover {
+    transform: scale(1.1);
+  }
+
+  /* Menu Drop Down */
+  .drop-down-admin {
+    margin-right: 0px !important;
+  }
+
+  .menu-drop-down {
+    margin-top: 0px;
+  }
+  .menu-drop-down::before {
+    top: -15px;
+    left: 117px;
+  }
+
+  .container-page {
+    margin-top: 37px;
+  }
+  .container-page-search {
+    margin-top: 100px !important;
+    overflow: hidden;
+  }
+  .img-landing-page {
+    width: 500px;
+    height: 500px;
+  }
+
+  .title {
+    font-size: 80px;
+  }
+
+  .paragraph {
+    font-family: "Avenir" !important;
+    font-size: 17px;
+  }
+
+  /* .landing-auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+  } */
+
+  /* Modal Login or Register */
+
+  .modal-body-auth {
+    width: 416px;
+  }
+  .select-gender {
+    width: 320px;
+  }
+
+  /* Home page */
+  .label-select-years {
+    text-align: center;
+  }
+
+  .container-search {
+    margin-top: 120px !important;
+  }
+  .search-title {
+    font-size: 80px;
+  }
+
+  .search-big {
+    width: 500px;
+  }
+  .search-small {
+    width: 230px !important;
+  }
+
+  .option-years {
+    width: 195px;
+    padding: 10px 7px;
+  }
+
+  .years-container {
+    top: 140px;
+    position: sticky !important;
+  }
+
+  /* Pagination */
+  .container-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .paginate-item {
+    font-weight: 700;
+    border: 1px solid #ac47f5 !important;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .btn-prev-next {
+    border: none;
+    width: 100px !important;
+    font-weight: 700;
+    color: grey;
+  }
+  .btn-prev-next:hover {
+    color: #2279e3;
+  }
+  /* CardPDF */
+
+  .container-result-pdf {
+    margin-left: 40px !important;
+  }
+  .pdf-container-big {
+    width: 210px;
+    transition: 1s ease-out;
+  }
+
+  .pdf-container-small {
+    width: 170px;
+  }
+
+  .big-pdf-thumb {
+    width: 220px;
+    height: 300px;
+  }
+
+  .small-pdf-thumb {
+    width: 170px;
+    height: 230px;
+  }
+
+  .label-select-years {
+    margin-left: 0px;
+  }
+
+  .title-card {
+    font-size: 18px;
+  }
+
+  .small-title-card {
+    font-size: 16px;
+  }
+
+  .detail-card {
+    font-size: 15px;
+  }
+
+  .small-detail-card {
+    font-size: 13px;
+  }
+
+  .page:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .page:hover .title-card {
+    white-space: initial;
+    overflow: visible;
+    margin-bottom: 20px;
+  }
+
+  .page:hover .name-card {
+    white-space: initial;
+    overflow: visible;
+  }
+
+  /* Profile Page */
+  .title-profile {
+    font-size: 70px;
+  }
+
+  .profile-icon {
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .avatar img {
+    width: 1930px;
+    height: 193px;
+  }
+
+  .btn-edit-profile {
+    background-color: #ffd35c;
+    border: none;
+    padding: 10px;
+    width: 130px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: grey;
+    font-size: 17px;
+  }
+
+  .btn-save-profile {
+    background-color: #ffceb6;
+    border: none;
+    padding: 10px;
+    width: 130px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: rgb(46, 45, 45);
+    font-size: 17px;
+  }
+
+  .btn-edit-profile:hover {
+    transform: scale(1.1);
+  }
+
+  .detail-profile {
+    margin-bottom: 15px;
+  }
+
+  .label-detail-profile {
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .container-picture-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .container-sub-detail-profile {
+    margin-top: 1px !important;
+    border-radius: 5px;
+    border: 1px solid #ffceb6;
+    padding: 9px 1px;
+  }
+
+  .column-detail {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-detail {
+    border: 2px solid #cff0fa;
+    padding: 2px 5px;
+    outline: none;
+  }
+
+  /* Detail PDF */
+
+  .thumb-big-pdf {
+    width: 340px;
+    height: 450px;
+  }
+
+  .title-detail-pdf {
+    font-size: 30px;
+  }
+
+  .btn-pdf-detail {
+    width: 200px;
+    margin-top: 0px;
+  }
+
+  .btn-coll {
+    margin-top: 0px !important;
+  }
+
+  .label-detail-pdf {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .p-detail-pdf {
+    font-size: 17px;
+  }
+
+  /* Add Literature Page */
+  .inp-file {
+    width: 300px;
+  }
+  .pdf-name {
+    margin-left: -70px !important;
+  }
+  .input-add-literature {
+    outline: none;
+    border: 3px solid grey;
+    padding: 7px 10px;
+    border-radius: 10px;
+    outline: pink !important;
+  }
+  .btn-add-literature {
+    width: 170px;
+    height: 40px;
+    border: none;
+    background-color: #ac47f5;
+    font-weight: 700;
+    color: white;
+    border-radius: 5px;
+  }
+  .btn-add-literature:hover {
+    transform: scale(1.1);
+  }
+
+  /* Empty Component */
+  .text-empty {
+    font-size: 50px;
+  }
+
+  .img-empty {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  /* Admin Page */
+  .title-admin {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight: 700;
+  }
+  .text-overflow {
+    white-space: initial;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .text-overflow:hover {
+    white-space: initial;
+    overflow: visible;
+  }
+  .check-pdf:hover {
+    cursor: pointer;
+    color: blue;
+  }
+  .btn-admin {
+    border: none;
+    font-weight: 700;
+    color: white;
+  }
+  .btn-admin:hover {
+    transform: scale(1.1);
+  }
+  .d-pending,
+  .d-approve,
+  .d-rejected {
+    font-size: 18px;
+    padding: 10px 0px;
+  }
+.lazy-container{
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-lazy{
+  height: 100px;
+  width: 100px;
+}
+  /* Chat Admin */
+
+}
+@media (min-width: 3000px) {
+  .years-container {
+    top: 100px;
+    position: sticky !important;
+  }
+}

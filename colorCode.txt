@@ -1,0 +1,5 @@
+#FFCEB6 Pink
+#CFF0FA blue
+#AC47F5 purple
+#FFD35C orange
+#1D1D1B
