@@ -46,7 +46,6 @@ export default function ModalRegister({ handelLogin }) {
       };
       const body = JSON.stringify(formValue);
       const response = await API.post("/register", body, config);
-      console.log("Response data: ", response.data.data);
       if (response.data.status == "success") {
         sweetAlert(true, "success", `Register Success`);
         handelOnHide();

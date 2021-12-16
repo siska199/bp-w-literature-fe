@@ -80,7 +80,6 @@ export default function DetailPDF() {
                 },
             };
             const response = await API.post("/collection",JSON.stringify({idLiterature:id}), config);
-            console.log("Ress Coll ADD",response.data.data)
             if (response?.status === 200) {
                 setRender(!render)
                 sweetAlert(false, "success", "Success Add To My Collections");
@@ -95,7 +94,6 @@ export default function DetailPDF() {
         try {
             const response = await API.delete("/collection/"+idColl);
             if (response?.status === 200) {
-                console.log("Res del: ")
                 setRender(!render)
                 sweetAlert(false, "success", "Success Remove Collection");
             }else{
@@ -119,7 +117,6 @@ export default function DetailPDF() {
   const handleDownload = async() =>{
     await API.get('/download-literature/'+data.id,  { responseType: 'blob' })
     .then(res=>{
-        console.log("download res: ", res.data)
         setLoading(true)
         FileDownload(res.data, `${data?.title}.pdf`)
         setLoading(false)
@@ -128,6 +125,8 @@ export default function DetailPDF() {
         sweetAlert(true, "error", `${err.response.data.message}`);
     })
   }
+
+// <img className="thumb-big-pdf shadow-lg" src={data.thumbnail} alt="Iframe Example"/>
 
     return (
         <div className="container py-3 my-5">
