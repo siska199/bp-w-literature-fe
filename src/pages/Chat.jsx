@@ -38,7 +38,7 @@ export default function ChatUser() {
     loadContact();
 
     socket.on("connection_error", (err) => {
-      console.log(err.message);
+      new Error(err.message);
     });
 
     loadMessage();
@@ -79,7 +79,6 @@ export default function ChatUser() {
 
   function lastMessage(data) {
     const dataResult = data.map((d) => {
-      console.log("data: ", d);
       let msg;
       const idLastMsgSender = d.senderMessage[d.senderMessage.length - 1]?.id;
       const idLastMsgRecipient =
@@ -119,6 +118,10 @@ export default function ChatUser() {
     socket.emit("load messages", userId);
     const takeDataContact = listDataContacts.filter((d) => d?.id == userId)[0];
     setContact(takeDataContact);
+  };
+
+  const handleSendMsgUsingKeyEnter = (e) => {
+    e.key == "Enter" && handleSendMsg(e);
   };
 
   const handleSendMsg = () => {
@@ -225,6 +228,7 @@ export default function ChatUser() {
                     ref={refInp}
                     placeholder="Type a message"
                     className="inp-send-message"
+                    onKeyUp={(e) => handleSendMsgUsingKeyEnter(e)}
                   />
                 </Col>
                 <Col lg={1} className="d-flex align-items-center">
