@@ -36,11 +36,11 @@ export default function ModalRegister({ handelLogin }) {
 
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
   const { register, setRegister, setLogin } = useContext(ModalContext);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   const handleOnSubmit = async (e) => {
     try {
       e.preventDefault();
-      setLoading(true)
+      setLoading(true);
       const config = {
         headers: {
           "Content-Type": "application/json",
@@ -48,19 +48,20 @@ export default function ModalRegister({ handelLogin }) {
       };
       const body = JSON.stringify(formValue);
       const response = await API.post("/register", body, config);
-      setLoading(false)
       if (response.data.status == "success") {
         sweetAlert(true, "success", `Register Success`);
         handelOnHide();
-
+        setLoading(false);
         setTimeout(() => {
           setLogin(true);
         }, 500);
       } else {
         showAlert(true, "danger", `${response.data.status}`);
+        setLoading(false);
       }
     } catch (error) {
       showAlert(true, "danger", `${error.response.data.message}`);
+      setLoading(false);
     }
   };
 
@@ -101,9 +102,9 @@ export default function ModalRegister({ handelLogin }) {
               />
             ))}
             <div className="mb-3 mt-4 ">
-              <button  className="btn-auth-in sign-up container-btn-auth">
+              <button className="btn-auth-in sign-up container-btn-auth">
                 Register
-                {loading &&  <Loading/>}
+                {loading && <Loading />}
               </button>
             </div>
           </form>

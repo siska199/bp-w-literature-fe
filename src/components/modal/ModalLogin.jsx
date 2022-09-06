@@ -53,13 +53,14 @@ export default function ModalLogin({ handelRegister }) {
       const response = await API.post("/login", body, config);
       setLoading(false);
       if (response?.status === 200) {
+        setLogin(false);
+        setLoading(false);
         setDataUser({
           isLogin: true,
           ...response.data.data,
         });
         localStorage.setItem("token", response.data.data.token);
         setAuthToken(localStorage.getItem("token"));
-        setLogin(false);
         setFormValue("");
         sweetAlert(false, "success", "Login Success");
         if (response.data.data.status == "admin") {
@@ -69,9 +70,11 @@ export default function ModalLogin({ handelRegister }) {
         }
       } else {
         showAlert(true, "dark", `${response.data.status}`);
+        setLoading(false);
       }
     } catch (error) {
       showAlert(true, "danger", `${error.response.data.message}`);
+      setLoading(false);
     }
   };
 
