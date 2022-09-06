@@ -6,6 +6,7 @@ import InputGroup from "./../InputGroup";
 import { API } from "../../config/api";
 import Alert from "./../Alert";
 import Swal from "sweetalert2";
+import Loading from "../Loading";
 
 export default function ModalRegister({ handelLogin }) {
   const initialValue = {
@@ -35,10 +36,11 @@ export default function ModalRegister({ handelLogin }) {
 
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
   const { register, setRegister, setLogin } = useContext(ModalContext);
-
+  const [loading, setLoading] = useState(false)
   const handleOnSubmit = async (e) => {
     try {
       e.preventDefault();
+      setLoading(true)
       const config = {
         headers: {
           "Content-Type": "application/json",
@@ -46,6 +48,7 @@ export default function ModalRegister({ handelLogin }) {
       };
       const body = JSON.stringify(formValue);
       const response = await API.post("/register", body, config);
+      setLoading(false)
       if (response.data.status == "success") {
         sweetAlert(true, "success", `Register Success`);
         handelOnHide();
@@ -97,9 +100,10 @@ export default function ModalRegister({ handelLogin }) {
                 value={value}
               />
             ))}
-            <div className="mb-3 mt-4 d-grid">
-              <button className="btn-auth-in sign-up">
+            <div className="mb-3 mt-4 ">
+              <button  className="btn-auth-in sign-up container-btn-auth">
                 Register
+                {loading &&  <Loading/>}
               </button>
             </div>
           </form>

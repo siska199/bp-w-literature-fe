@@ -5,15 +5,16 @@ import { ModalContext } from "../../context/ModalContext";
 import { useHistory } from "react-router-dom";
 import { Modal, Container, Row, Col } from "react-bootstrap";
 import InputGroup from "./../InputGroup";
-import { API,setAuthToken } from "../../config/api";
+import { API, setAuthToken } from "../../config/api";
 import Alert from "./../Alert";
 import Swal from "sweetalert2";
+import Loading from "../Loading";
 export default function ModalLogin({ handelRegister }) {
   const defaultValueForm = {
     email: "",
     password: "",
   };
-  const label = ["Email", "Password"]; 
+  const label = ["Email", "Password"];
   const [formValue, setFormValue] = useState(defaultValueForm);
   const handleChange = (e) => {
     setFormValue({
@@ -25,12 +26,13 @@ export default function ModalLogin({ handelRegister }) {
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
   const { login, setLogin } = useContext(ModalContext);
   const { setDataUser } = useContext(UserContext);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     return () => {
-        setFormValue(null);
-      }
-  },[])
+      setFormValue(null);
+    };
+  }, []);
 
   const handelOnHide = () => {
     setLogin(false);
@@ -41,6 +43,7 @@ export default function ModalLogin({ handelRegister }) {
   const handelOnSubmit = async (e) => {
     try {
       e.preventDefault();
+      setLoading(true);
       const config = {
         headers: {
           "Content-Type": "application/json",
@@ -48,22 +51,22 @@ export default function ModalLogin({ handelRegister }) {
       };
       const body = JSON.stringify(formValue);
       const response = await API.post("/login", body, config);
+      setLoading(false);
       if (response?.status === 200) {
         setDataUser({
           isLogin: true,
           ...response.data.data,
         });
-        localStorage.setItem("token", response.data.data.token); 
+        localStorage.setItem("token", response.data.data.token);
         setAuthToken(localStorage.getItem("token"));
         setLogin(false);
         setFormValue("");
         sweetAlert(false, "success", "Login Success");
-        if(response.data.data.status=="admin"){
+        if (response.data.data.status == "admin") {
           history.push("/admin-page");
-        }else{
-          history.push("/home/search", );
+        } else {
+          history.push("/home/search");
         }
-
       } else {
         showAlert(true, "dark", `${response.data.status}`);
       }
@@ -75,7 +78,7 @@ export default function ModalLogin({ handelRegister }) {
   const showAlert = (show = false, type = "", msg = " ") => {
     setAlert({ show, type, msg });
   };
-  
+
   const sweetAlert = (show = false, type = "", msg = "") => {
     Swal.fire({
       icon: type,
@@ -110,10 +113,10 @@ export default function ModalLogin({ handelRegister }) {
                     value={value}
                   />
                 ))}
-                <div className="mb-3 mt-4 d-grid">
-                  <button
-                    className="btn-auth-in sign-in">
+                <div className="">
+                  <button className="btn-auth-in sign-in container-btn-auth">
                     Login
+                    {loading && <Loading />}
                   </button>
                 </div>
               </form>
