@@ -9,7 +9,6 @@ import RecipientCard from "../components/card/RecipientCard";
 import { UserContext } from "../context/UserContext";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiSend } from "react-icons/bi";
-
 import { io } from "socket.io-client";
 
 let socket;
@@ -19,12 +18,11 @@ export default function ChatUser() {
   const [loading, setLoading] = useState(false);
   const [contact, setContact] = useState("");
   const { dataUser } = useContext(UserContext);
-
   const refInp = useRef(null);
   const mesRef = useRef();
   const scrollRef = useRef();
-
   const [newMsg, setNewMsg] = useState([]);
+
   useEffect(() => {
     socket = io(process.env.REACT_APP_BASE_URL_BE, {
       auth: {
@@ -135,117 +133,101 @@ export default function ChatUser() {
   };
 
   return (
-    <div className="container">
-      <div className="row p-3 mx-5 container-chat">
-        <Col lg={4} md={3} sm={3}>
-          <div className="row">
-            <Contact
-              fullName={dataUser.fullName}
-              msg={"Online"}
-              user={true}
-              image={dataUser.image}
-            />
-          </div>
-
-          <div className="row container-contact mx-1 me-3 py-3">
-            {dataUser.status == "admin" && (
-              <div className="row justify-content-center">
-                <SearchContact />
-              </div>
-            )}
-
-            <div className="container-list-contact px-4">
-              {listDataContacts[0] != "" && (
-                <>
-                  {listDataContacts?.map((data, i) => {
-                    let active = true;
-                    return (
-                      <Contact
-                        active={active}
-                        msg={data.msg}
-                        key={i}
-                        cotactId={contact?.id}
-                        idUser={data.id}
-                        fullName={data.fullName}
-                        image={data.image}
-                        handleActiveContact={handleActiveContact}
-                      />
-                    );
-                  })}
-                </>
-              )}
-            </div>
-          </div>
-        </Col>
-
-        <Col lg={8} md={9} sm={9} className="pe-4">
-          {contact ? (
-            <>
-              <div className="row justify-content-center">
-                <Col lg={12} className="">
-                  <RecipientCard
-                    fullName={contact.fullName}
-                    icon={contact.image}
-                  />
-                </Col>
-              </div>
-              <div className="row">
-                <div ref={mesRef} className="mt-3 container-chat-message">
-                  {messages[0] ? (
-                    <>
-                      {loading ? (
-                        <div>Loading...</div>
-                      ) : (
-                        <>
-                          {messages.map((m, i) => {
-                            let receiver = true;
-                            let imageIcon = m.sender.image;
-                            if (m.idRecipient == contact?.id) {
-                              receiver = false;
-                            }
-                            return (
-                              <Message
-                                key={i}
-                                image={imageIcon}
-                                receiver={receiver}
-                                contact={contact?.id}
-                                msg={m.message}
-                              />
-                            );
-                          })}
-                        </>
-                      )}
-                    </>
-                  ) : (
-                    <div className="mt-5">No message</div>
-                  )}
-                </div>
-              </div>
-
-              <div className="row mt-3 container-send-message">
-                <Col lg={11} className="">
-                  <input
-                    ref={refInp}
-                    placeholder="Type a message"
-                    className="inp-send-message"
-                    onKeyUp={(e) => handleSendMsgUsingKeyEnter(e)}
-                  />
-                </Col>
-                <Col lg={1} className="d-flex align-items-center">
-                  <div onClick={() => handleSendMsg()} className="send-msg-btn">
-                    <BiSend size="25px" />
-                  </div>
-                </Col>
-              </div>
-            </>
-          ) : (
-            <div className="row justfy-content-center">
-              <HiOutlineMail color="#AC47F5" size="400px" />
-              <div className="complain-text ">Compalin Chat</div>
+    <article className="container-chat">
+      <section className="container-left">
+        <Contact
+          fullName={dataUser.fullName}
+          msg={"Online"}
+          user={true}
+          image={dataUser.image}
+        />
+        <hr />
+        <div className="">
+          {dataUser.status == "admin" && (
+            <div className="container-search-contact">
+              <SearchContact />
             </div>
           )}
-        </Col>
-      </div>
-    </div>
+
+          <div className="container-contacts">
+            {listDataContacts[0] != "" && (
+              <>
+                {listDataContacts?.map((data, i) => {
+                  let active = true;
+                  return (
+                    <Contact
+                      active={active}
+                      msg={data.msg}
+                      key={i}
+                      cotactId={contact?.id}
+                      idUser={data.id}
+                      fullName={data.fullName}
+                      image={data.image}
+                      handleActiveContact={handleActiveContact}
+                    />
+                  );
+                })}
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className="container-right">
+        {contact ? (
+          <>
+            <RecipientCard fullName={contact.fullName} icon={contact.image} />
+
+            <div ref={mesRef} className="my-3 container-chat-message">
+              {messages[0] ? (
+                <>
+                  {loading ? (
+                    <div>Loading...</div>
+                  ) : (
+                    <>
+                      {messages.map((m, i) => {
+                        let receiver = true;
+                        let imageIcon = m.sender.image;
+                        if (m.idRecipient == contact?.id) {
+                          receiver = false;
+                        }
+                        return (
+                          <Message
+                            key={i}
+                            image={imageIcon}
+                            receiver={receiver}
+                            contact={contact?.id}
+                            msg={m.message}
+                          />
+                        );
+                      })}
+                    </>
+                  )}
+                </>
+              ) : (
+                <div className="mt-5">No message</div>
+              )}
+            </div>
+
+            <div className="container-send-message">
+              <input
+                ref={refInp}
+                placeholder="Type a message"
+                className="inp-send-message"
+                onKeyUp={(e) => handleSendMsgUsingKeyEnter(e)}
+              />
+              <div onClick={() => handleSendMsg()} className="send-msg-btn">
+                <BiSend size="25px" />
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="row justfy-content-center">
+            <HiOutlineMail color="#AC47F5" size="400px" />
+            <div className="complain-text ">Compalin Chat</div>
+          </div>
+        )}
+      </section>
+    </article>
   );
 }

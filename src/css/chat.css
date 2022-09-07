@@ -1,0 +1,293 @@
+/*----------------------------Chat--------------------------*/
+
+/* .container-chatApp{
+    font-family: 'Poppins', sans-serif !important;
+  }
+   */
+  .container-chat{
+    margin: auto;
+    margin-top:-10px !important;
+    border-radius: 10px;
+    background-color: #e4ede6;
+    width: 70rem;
+    margin-bottom: 2rem;
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+  }
+  
+  /* Left Side */
+  .container-left{
+    border-radius: 15px;
+    background-color: white;
+    width : 30%;
+  }
+.container-search-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 10px;
+}
+.container-contacts{
+    height:350px;
+    margin-top: 10px;
+    overflow:auto;
+  }
+  .search-contact{
+    width : 100%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+    background-color: #f0f0f0;
+    font-size: 13px;
+  }
+
+  /* Contact */
+.container-contact{
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+  .img-contact{
+    width : 40px;
+    height: 40px;
+    border-radius: 50%;
+    border : 1px solid black;
+  }
+
+.container-contact-detail{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+  .active-contact{
+    background-color: rgb(180, 166, 166);
+    border-radius: 5px;
+    cursor:pointer;
+  }
+  .active-contact .new-message{
+    color: blue;
+  }
+  .active-contact .username{
+    color: rgb(248, 221, 171);
+  }
+  
+  .non-active-contact:hover .new-message{
+    cursor:pointer;
+    color: blue;
+  }
+  
+  .non-active-contact:hover .username{
+    cursor:pointer;
+    color:orange;
+  }
+  
+  .container-contact-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 17px;
+  }
+  
+  .username{
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .new-message{
+    font-size: 12px;
+    color: grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .time{
+    font-size: 12px;
+  }
+  .notif-msg{
+    background-color: greenyellow;
+    font-size : 11px;
+    color: white;
+    border-radius: 50%;
+    width: 10px;
+    height:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /*Right Message*/
+  .container-right{
+    width: 70%;
+    padding-left: 2rem;
+  }
+  .card-receiver{
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding : 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .container-chat-message{
+    overflow-y:auto;
+    overflow-x: hidden;
+    height: 360px;
+    width : 100%;
+  }
+  
+  .container-chat-message::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .container-chat-message::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  }
+  
+  .container-chat-message::-webkit-scrollbar-thumb {
+  background: #74bdf5; 
+  border-radius: 10px;
+  }
+  
+  .container-chat-message::-webkit-scrollbar-thumb:hover {
+    background: #64b6f5; 
+}
+  
+  .text-message{
+    position: relative;
+    font-size: 12px;
+    padding: 4px 10px;
+    z-index: 9999;
+    border-radius: 10px;
+    color: white;
+  
+  }
+  
+  .sender{
+    background-color:  #AC47F5 ;
+  }
+  .receiver{
+    background-color: #FFD35C;
+  }
+  .sender-img{
+    z-index: 9999 !important;
+  }
+  .sender-img::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: 0px;
+    border-bottom: solid 10px transparent;
+    border-top: solid 10px transparent;
+    border-right: solid 10px pink;
+  }
+  
+  .receiver-img::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: 0px;
+    border-bottom: solid 10px transparent;
+    border-top: solid 10px transparent;
+    border-right: solid 10px #AC47F5;
+  }
+  
+  .img-contact-message{
+    height:30px;
+    width : 30px;
+  }
+  .container-send-message{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .inp-send-message{
+    width: 590px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  .send-msg-btn{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-complain-user{
+    position: relative;
+    z-index: 99999999 !important;
+    background-color: #FFD35C;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white !important;
+    padding: 7px 10px;
+  }
+  .btn-complain-user:hover{
+    transform: scale(1.1);
+  }
+  
+  .complain-text{
+    margin-top:-60px !important;
+    text-align: center;
+    font-size:50px;
+    font-family: 700;
+    font-family: "Story time" !important;
+    color:#FFD35C;
+  }
+
+@media (max-width: 992px){
+    .container-chat{
+        width : 48rem;
+    }
+}
+
+@media (max-width: 768px){
+    .container-chat{
+        width : 30rem;
+        padding: 1rem;
+    }
+    .container-left{
+        width: auto;
+    }
+
+    .container-contact{
+        gap:0.2rem;
+    }
+    .container-right{
+        width: 85%;
+        padding-left: 1rem;
+      }
+      .container-contact-detail{
+        display: none;
+      }
+      .search-contact{
+        display: none;
+      }
+}
+
+@media (max-width: 480px){
+    .container-chat{
+        width : 22rem;
+    }
+}
