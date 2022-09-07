@@ -288,11 +288,17 @@
       .search-contact{
         display: none;
       }
+      .container-contact{
+        padding: 0.5rem;
+    }
 }
 
 @media (max-width: 480px){
     .container-chat{
         width : 22rem;
+    }
+    .container-contact{
+        padding: 0.5rem;
     }
 
 }

@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable eqeqeq */
 import React, { useContext, useEffect, useState, useRef } from "react";
-import { Col } from "react-bootstrap";
 import Contact from "../components/Contact";
 import Message from "../components/Message";
 import SearchContact from "../components/search/SearchContact";
