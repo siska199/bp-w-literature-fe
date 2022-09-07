@@ -138,6 +138,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    width : 100%;
   }
   
   .container-chat-message{
@@ -278,7 +279,7 @@
     }
     
     .container-right{
-        width: 85%;
+        width: 80%;
         padding-left: 1rem;
       }
       .container-contact-detail{
@@ -293,4 +294,5 @@
     .container-chat{
         width : 22rem;
     }
+
 }
