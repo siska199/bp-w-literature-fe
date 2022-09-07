@@ -140,6 +140,7 @@ export default function ChatUser() {
           msg={"Online"}
           user={true}
           image={dataUser.image}
+          msger={true}
         />
         <hr />
         <div className="">

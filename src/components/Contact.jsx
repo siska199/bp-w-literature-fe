@@ -10,11 +10,11 @@ export default function Contact(props) {
       className={` ${!props.user ? "c-contact" : " "}`}
     >
       <div
-        className={`container-contact  ${
+        className={`container-contact ${props.msger&&" msger"} ${
           props.cotactId == props.idUser && !props.user
             ? " active-contact "
             : " non-active-contact "
-        }`}
+        } `}
       >
         <img src={props.image} className="img-contact" alt="" />
         <div lg={8} className="container-contact-detail">
