@@ -11,6 +11,7 @@ import { API } from "../config/api";
 import Swal from "sweetalert2";
 import FileDownload from 'js-file-download'
 import { FaSpinner } from "react-icons/fa";
+import { handleDownloadFile } from '../utils/helper';
 
 export default function DetailPDF() {
     const [statusColl, setStatusColl] = useState(false)
@@ -115,15 +116,11 @@ export default function DetailPDF() {
   };
 
   const handleDownload = async() =>{
-    await API.get('/download-literature/'+data.id,  { responseType: 'blob' })
-    .then(res=>{
-        setLoading(true)
-        FileDownload(res.data, `${data?.title}.pdf`)
-        setLoading(false)
+    await handleDownloadFile({
+        url : data?.file,
+        filename:`${data?.title}.pdf`
     })
-    .catch(err=>{
-        sweetAlert(true, "error", `${err.response.data.message}`);
-    })
+
   }
 
 // <img className="thumb-big-pdf shadow-lg" src={data.thumbnail} alt="Iframe Example"/>
