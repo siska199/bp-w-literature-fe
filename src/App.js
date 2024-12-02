@@ -22,7 +22,6 @@ function App() {
 
   useEffect(() => {
     checkUser(setDataUser);
-    console.log("base url", process.env.REACT_APP_BASE_URL_BE);
   }, [dataUser.isLogin]);
 
   return (
